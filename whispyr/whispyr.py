@@ -18,7 +18,7 @@ from urllib3.exceptions import MaxRetryError
 class WhispirError(Exception):
 
     def __init__(self, response):
-        super(Exception, self).__init__()
+        super(WhispirError, self).__init__()
         self.response = response
 
 
@@ -89,6 +89,7 @@ class Whispir(object):
         self._session.headers.update({
             'User-Agent': 'whispyr/{}'.format(__version__)
         })
+        self.status_code = None
         # collections
         self.workspaces = Workspaces(self)
         self.messages = Messages(self)
@@ -96,6 +97,7 @@ class Whispir(object):
         self.response_rules = ResponseRules(self)
         self.contacts = Contacts(self)
         self.apps = Apps(self)
+        self.callbacks = Callbacks(self)
 
     def request(self, method, path, **kwargs):
         url = urljoin(self._base_url, path)
@@ -338,6 +340,9 @@ class Contacts(Collection):
 class Apps(Collection):
     list_name = 'applications'
 
+class Callbacks(Collection):
+    pass
+
 
 class Workspace(Container):
     def __init__(self, *args, **kwargs):
@@ -379,6 +384,10 @@ class Contact(Container):
 class App(Container):
     pass
 
+class Callback(Container):
+    def __init__(self, collection, id=None, **kwargs):
+        self.type_name = 'api-callback'
+        super(Callback, self).__init__(collection, id, kwargs)
 
 def _singularize(string):
     rules = [('ies', 'y'), ('uses', 'us'), ('s', '')]

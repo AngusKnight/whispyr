@@ -1,0 +1,56 @@
+interactions:
+  - request:
+      body: |-
+        {"name" : "Callback Name", "url" : "http://myserver.com/mycallback.php", "auth" : {"type" : "querystring", "key" : "MY_AUTH_KEY"}, "contentType" : "json", "removeHTML" : "disabled", "retriesEnabled" : "true", "email" : "me@example.com", "callbacks" : {"reply" : "enabled", "undeliverable" : "enabled"}}
+      headers:
+        Accept:
+          - application/vnd.whispir.api-callback-v1+json
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        Content-Length:
+          - '66'
+        Content-Type:
+          - application/vnd.whispir.workspace-v1+json
+        authorization:
+          - Basic VTUzUk40TTM6UDRaWlcwUkQ=
+        x-api-key:
+          - V4L1D4P1K3Y
+      method: POST
+      uri: https://api.us.whispir.com/workspaces
+    response:
+      headers:
+        Cache-Control:
+          - max-age=0
+          - no-cache="set-cookie"
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/vnd.whispir.workspace-v1+json
+        Date:
+          - Tue, 14 Aug 2018 16:22:50 GMT
+        Expires:
+          - Tue, 14 Aug 2018 16:22:48 GMT
+        Location:
+          - https://api.whispir.com/workspaces/6DD8216F7FEAB9F6
+        Vary:
+          - Accept-Encoding
+        content-length:
+          - '0'
+        x-amz-apigw-id:
+          - Ln055EUgyK4FfGw=
+        x-amzn-Remapped-Connection:
+          - keep-alive
+        x-amzn-Remapped-Content-Length:
+          - '554'
+        x-amzn-Remapped-Date:
+          - Tue, 14 Aug 2018 16:22:48 GMT
+        x-amzn-Remapped-Server:
+          - Apache
+        x-amzn-RequestId:
+          - 48e0104b-9fde-11e8-80fd-69b5e836710a
+      status:
+        code: 201
+        message: Created
+version: 1

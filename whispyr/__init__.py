@@ -9,7 +9,7 @@ __version__ = '0.3.0'
 from .whispyr import Whispir, WhispirRetry
 
 from .whispyr import Message, MessageStatus, MessageResponse, Template, \
-    Workspace, ResponseRule, Contact, App
+    Workspace, ResponseRule, Contact, App, Callback
 
 from .whispyr import WhispirError, ClientError, ServerError, JSONDecodeError
 
@@ -18,7 +18,7 @@ __all__ = [
     'Whispir', 'WhispirRetry',
     # Resources
     'Message', 'MessageStatus', 'MessageResponse', 'Template', 'Workspace',
-    'ResponseRule', 'Contact', 'App',
+    'ResponseRule', 'Contact', 'App', 'Callback'
     # Errors
     'WhispirError', 'ClientError', 'ServerError', 'JSONDecodeError'
 ]

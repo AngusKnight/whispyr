@@ -1,0 +1,61 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.whispir.workspace-v1+json
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/vnd.whispir.workspace-v1+json
+        authorization:
+          - Basic VTUzUk40TTM6UDRaWlcwUkQ=
+        x-api-key:
+          - V4L1D4P1K3Y
+      method: GET
+      uri: https://api.us.whispir.com/callbacks/BCD374DABC73649B
+    response:
+      body:
+        string: |-
+          {
+            "id" : "BCD374DABC73649B",
+            "name" : "Sample Callback 1",
+            "url" : "http://myserver.com/callback1.php",
+            "link" : [ {
+              "uri" : "https://api.us.whispir.com/callbacks/BCD374DABC73649B?apikey=V4L1D4P1K3Y",
+              "rel" : "self",
+              "method" : "GET"
+            }]
+          }
+      headers:
+        Cache-Control:
+          - max-age=0
+          - no-cache="set-cookie"
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/vnd.whispir.workspace-v1+json
+        Date:
+          - Tue, 14 Aug 2018 16:25:30 GMT
+        Expires:
+          - Tue, 14 Aug 2018 16:25:30 GMT
+        Vary:
+          - Accept-Encoding
+        content-length:
+          - '253'
+        x-amz-apigw-id:
+          - Ln1TMFT0yK4FZQw=
+        x-amzn-Remapped-Connection:
+          - keep-alive
+        x-amzn-Remapped-Date:
+          - Tue, 14 Aug 2018 16:25:30 GMT
+        x-amzn-Remapped-Server:
+          - Apache
+        x-amzn-RequestId:
+          - a96d2af9-9fde-11e8-a9a8-ed6c1c6322e4
+      status:
+        code: 200
+        message: OK
+version: 1

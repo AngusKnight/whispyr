@@ -89,7 +89,6 @@ class Whispir(object):
         self._session.headers.update({
             'User-Agent': 'whispyr/{}'.format(__version__)
         })
-        self.status_code = None
         # collections
         self.workspaces = Workspaces(self)
         self.messages = Messages(self)

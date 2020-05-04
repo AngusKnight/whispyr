@@ -106,7 +106,7 @@ class Whispir(object):
         else:
             if 400 <= response.status_code < 500:
                 error = ClientError
-            elif 500 <= self.status_code < 600:
+            elif 500 <= response.status_code < 600:
                 error = ServerError
 
             raise error(response)

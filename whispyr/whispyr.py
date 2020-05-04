@@ -341,7 +341,9 @@ class Apps(Collection):
     list_name = 'applications'
 
 class Callbacks(Collection):
-    pass
+    def __init__(self, whispir, base_container=None):
+        self.type_name = 'api-callback'
+        super(Callbacks, self).__init__(whispir, base_container)
 
 
 class Workspace(Container):

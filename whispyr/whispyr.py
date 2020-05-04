@@ -388,7 +388,7 @@ class App(Container):
 class Callback(Container):
     def __init__(self, collection, id=None, **kwargs):
         self.type_name = 'api-callback'
-        super(Callback, self).__init__(collection, id, kwargs)
+        super(Callback, self).__init__(collection, id, **kwargs)
 
 def _singularize(string):
     rules = [('ies', 'y'), ('uses', 'us'), ('s', '')]
